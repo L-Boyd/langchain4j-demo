@@ -2,9 +2,7 @@ package com.lbytech;
 
 import dev.langchain4j.model.openai.OpenAiChatModel;
 
-/**
- * Hello world!
- */
+
 public class App {
     public static void main(String[] args) {
         // 读取环境配置
@@ -15,6 +13,8 @@ public class App {
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
                 .modelName("qwen-plus")
                 .apiKey(apiKey)
+                .logRequests(true)
+                .logResponses(true)
                 .build();
 
         // 调用模型
